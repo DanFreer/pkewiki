@@ -299,76 +299,86 @@ class AdvancedGameWiki {
                         <span class="item-rarity rarity-${item.rarity}">${item.rarity}</span>
                         <span>Level ${item.level}</span>
                         <span>${item.type} - ${item.subtype}</span>
-                        <span>${item.value} Gold</span>
+                        
                     </div>
                     <p class="item-detail-description">${item.description}</p>
                 </div>
             </div>
+
             <div class="item-detail-body">
-                <div class="detail-sections">
-                    ${this.renderStatsSection(item)}
-                    ${this.renderRequirementsSection(item)}
-                    ${this.renderEffectsSection(item)}
-                    ${this.renderRecipeSection(item)}
-                    ${this.renderDurabilitySection(item)}
-                    ${this.renderMetadataSection(item)}
-                </div>
+
+                <div class="detail-sections"> 
+            
+                    <div class="detail-section">
+                        <h3>Requirements</h3>
+                        <ul class="property-list">
+                            <li class="property-item">
+                                <span class="property-label">Character Level</span>
+                                <span class="property-value">${item.level}</span>
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Strenght</span>
+                                <span class="property-value">${item.requirements.strength}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Agility</span>
+                                <span class="property-value">${item.requirements.agility}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Intelligence</span>
+                                <span class="property-value">${item.requirements.intelligence}</span>   
+                            </li>
+                        </ul>
+                    </div>
+                      
+                    <div class="detail-section">
+                        <h3>Stats Given</h3>
+                        <ul class="property-list">
+                            <li class="property-item">
+                                <span class="property-label">Damage</span>
+                                <span class="property-value">${item.stats.damage}</span>
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Range</span>
+                                <span class="property-value">${item.stats.range}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Defense</span>
+                                <span class="property-value">${item.stats.defense}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Health</span>
+                                <span class="property-value">${item.stats.health}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Mana</span>
+                                <span class="property-value">${item.stats.mana}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Strength</span>
+                                <span class="property-value">${item.stats.strength}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Agility</span>
+                                <span class="property-value">${item.stats.agility}</span>   
+                            </li>
+                            <li class="property-item">
+                                <span class="property-label">Intelligence</span>
+                                <span class="property-value">${item.stats.intelligence}</span>   
+                            </li>
+                        </ul>
+                    </div>
+                    
+                        ${this.renderEffectsSection(item)}
+                        ${this.renderRecipeSection(item)}
+                        ${this.renderDurabilitySection(item)}
+                        
+
+                </div>        
+            </div>
+
             </div>
         `;
-    }
-
-    renderStatsSection(item) {
-        const baseStats = item.baseStats || {};
-        const currentStats = item.stats || {};
-        
-        const statEntries = Object.keys({...baseStats, ...currentStats})
-            .filter(key => baseStats[key] !== null || currentStats[key] !== null)
-            .map(key => {
-                const base = baseStats[key] || 0;
-                const current = currentStats[key] || 0;
-                const difference = current - base;
-                const diffDisplay = difference > 0 ? `(+${difference})` : difference < 0 ? `(${difference})` : '';
-                
-                return `
-                    <li class="property-item">
-                        <span class="property-label">${this.formatStatName(key)}</span>
-                        <span class="property-value">
-                            ${current} ${diffDisplay}
-                        </span>
-                    </li>
-                `;
-            }).join('');
-
-        return `
-            <div class="detail-section">
-                <h3>Statistics</h3>
-                <ul class="property-list">
-                    ${statEntries}
-                </ul>
-            </div>
-        `;
-    }
-
-    renderRequirementsSection(item) {
-        if (!item.requirements) return '';
-        
-        const reqEntries = Object.entries(item.requirements)
-            .filter(([_, value]) => value !== null)
-            .map(([key, value]) => `
-                <li class="property-item">
-                    <span class="property-label">${this.formatStatName(key)}</span>
-                    <span class="property-value">${value}</span>
-                </li>
-            `).join('');
-
-        return reqEntries ? `
-            <div class="detail-section">
-                <h3>Requirements</h3>
-                <ul class="property-list">
-                    ${reqEntries}
-                </ul>
-            </div>
-        ` : '';
     }
 
     renderEffectsSection(item) {
@@ -432,15 +442,15 @@ class AdvancedGameWiki {
     renderDurabilitySection(item) {
         if (!item.durability) return '';
         
-        const percentage = (item.durability.current / item.durability.max) * 100;
+
         
         return `
             <div class="detail-section">
                 <h3>Durability</h3>
                 <ul class="property-list">
                     <li class="property-item">
-                        <span class="property-label">Current</span>
-                        <span class="property-value">${item.durability.current}/${item.durability.max} (${percentage.toFixed(1)}%)</span>
+                        <span class="property-label">Max Durability</span>
+                        <span class="property-value">${item.durability.max}</span>
                     </li>
                 </ul>
             </div>
@@ -703,23 +713,26 @@ class AdvancedGameWiki {
                         <h3 class="item-name">${item.name}</h3>
                         <span class="item-rarity rarity-${item.rarity}">${item.rarity}</span>
                     </div>
-                    <div class="item-meta">
-                        <span>Lvl ${item.level}</span>
-                        <span>${item.type}</span>
-                        ${item.enhancementLevel > 0 ? `<span>+${item.enhancementLevel}</span>` : ''}
-                    </div>
                 </div>
                 <div class="item-body">
                     <p class="item-description">${item.description}</p>
                     <div class="item-stats">
-                        ${mainStats.map(stat => `
-                            <div class="stat-item">
-                                <span class="stat-label">${stat.label}</span>
-                                <span class="stat-value">${stat.value}</span>
-                            </div>
-                        `).join('')}
+                        <span class="stat-label">Required Level</span>
+                        <span class="stat-value">${item.requirements.level}</span>
                     </div>
-                    <div class="item-value">${item.value} Gold</div>
+                    <div class="item-stats">
+                        <span class="stat-label">Type</span>
+                        <span class="stat-value">${item.type}</span>
+                        <span class="stat-label">${item.subtype ? "Subtype" : ""}</span>
+                        <span class="stat-value">${item.subtype ? item.subtype : ""}</span>   
+                        <span class="stat-label">Stat Req</span>
+                        <span class="stat-value">Str: ${item.requirements.strength ? item.requirements.strength : "0"}</span>
+                        
+                        <span class="stat-value">Agi: ${item.requirements.agility ? item.requirements.agility : "0"}</span>
+                        
+                        <span class="stat-value">Int: ${item.requirements.intelligence ? item.requirements.intelligence : "0"}</span>
+                        
+                    </div>
                 </div>
             </div>
         `;

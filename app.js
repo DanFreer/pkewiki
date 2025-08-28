@@ -2,7 +2,6 @@
 console.log("app.js loaded");
 class AdvancedGameWiki {
     constructor() {
-        this.jsonDataURL = "https://api.pkechoes.com/api/game/debug/all-items"; // Set your fixed URL here
         this.items = [];
         this.categories = [];
         this.gameInfo = {};
@@ -69,7 +68,6 @@ class AdvancedGameWiki {
         this.setupEventListeners();
         console.log("this is after eventlistener");
 
-
         this.updateLoaderStatus("Loading items from local JSON file...");
         console.log("this is before the try");
 
@@ -89,25 +87,9 @@ class AdvancedGameWiki {
             this.renderItemsSection();  
 
         } catch (localErr) {
-            console.warn("Failed to load local JSON, trying online URL...", localErr);
-            this.updateLoaderStatus("Loading items from online URL...");
-            try {
-                const data = await this.fetchJsonData(this.jsonDataURL);
-                this.gameData = data;
-                this.items = this.normalizeItems(data.items || data);
-                this.buildFilterOptions();
-                this.populateFilterControls();
-                this.clearAllFilters();
-                this.updateLoaderStatus("Loaded items from online JSON.");
-                this.renderHomeSection();  // Render home section after successful online load
-                // Also render the items section
-                this.renderItemsSection();
-
-            } catch (onlineErr) {
-                console.log("Failed to load JSON data from both sources.", "error");
-                this.updateLoaderStatus("Failed to load items data.");
-                alert("Could not load items from local or online JSON. Please check your setup.");
-            }
+            console.warn("Failed to load local JSON.", localErr);
+            this.updateLoaderStatus("Failed to load items data.");
+            alert("Could not load items from local JSON. Please check your setup.");
         }
     }
 
@@ -298,11 +280,17 @@ class AdvancedGameWiki {
                     <div class="item-detail-meta">
                         <span class="item-rarity rarity-${item.rarity}">${item.rarity}</span>
                         <span>Level ${item.level}</span>
-                        <span>${item.type} - ${item.subtype}</span>
-                        
+                        <span>Type: ${item.type} - Subtype: ${item.subtype ? item.subtype : "none"}</span>
                     </div>
+                    <h3>From: </h3>
+                    <div class="item-detail-meta">
+                        <span>${item.dropSources && item.dropSources[0] ? item.dropSources[0].sourceId.replace(/_/g, " ") : ""}</span>
+                    </div>
+                    
                     <p class="item-detail-description">${item.description}</p>
+                    <span>Stack Size: ${item.maxStack}</span>
                 </div>
+
             </div>
 
             <div class="item-detail-body">

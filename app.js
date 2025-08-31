@@ -317,6 +317,8 @@ class AdvancedGameWiki {
                                 <span class="property-value">${item.requirements.intelligence}</span>   
                             </li>
                         </ul>
+                        ${this.renderDurabilitySection(item)}
+                        
                     </div>
                       
                     <div class="detail-section">
@@ -359,7 +361,7 @@ class AdvancedGameWiki {
                     
                         ${this.renderEffectsSection(item)}
                         ${this.renderRecipeSection(item)}
-                        ${this.renderDurabilitySection(item)}
+                        
                         
 
                 </div>        
@@ -377,7 +379,7 @@ class AdvancedGameWiki {
                 <div>
                     <strong>${effect.name || 'Unnamed Effect'}</strong><br>
                     <small>${effect.description}</small><br>
-                    <small>Type: ${effect.effectType} | Trigger: ${effect.triggerCondition || 'Always'} | Chance: ${effect.triggerChance || 0}%</small>
+                    <small>Type: ${effect.effectType ? effect.effectType.replace(/_/g, " ") : "No type"} | Trigger: ${effect.triggerCondition || 'Always'} | Chance: ${effect.triggerChance || 0}%</small>
                 </div>
             </li>
         `).join('');
@@ -397,8 +399,8 @@ class AdvancedGameWiki {
         
         const materialsHtml = item.recipe.materials?.map(material => `
             <li class="property-item">
-                <span class="property-label">${material.itemId}</span>
-                <span class="property-value">${material.quantity}x</span>
+                <span class="property-label">${material.itemId.replace(/_/g, " ")}</span>
+                <span class="property-value">${material.quantity}</span>
             </li>
         `).join('') || '';
 
@@ -428,20 +430,21 @@ class AdvancedGameWiki {
     }
 
     renderDurabilitySection(item) {
-        if (!item.durability) return '';
-        
-
-        
+       
         return `
-            <div class="detail-section">
-                <h3>Durability</h3>
+            <br >
+                <h3>Additional Info</h3>
                 <ul class="property-list">
                     <li class="property-item">
                         <span class="property-label">Max Durability</span>
                         <span class="property-value">${item.durability.max}</span>
                     </li>
+                    <li class="property-item">
+                        <span class="property-label">Weight</span>
+                        <span class="property-value">${item.weight}</span>
+                    </li>
                 </ul>
-            </div>
+            
         `;
     }
 

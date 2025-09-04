@@ -201,6 +201,17 @@ class AdvancedGameWiki {
                 this.closeModal();
             }
         });
+
+        // Item link clicks (delegated event listener)
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('item-link')) {
+                e.preventDefault();
+                const itemId = e.target.getAttribute('data-item-id');
+                if (itemId) {
+                    this.showItemModal(itemId);
+                }
+            }
+        });
     }
 
     renderHomeSection() {
@@ -361,6 +372,7 @@ class AdvancedGameWiki {
                     
                         ${this.renderEffectsSection(item)}
                         ${this.renderRecipeSection(item)}
+                        ${this.renderBuildsIntoSection(item)}
                         
                         
 
@@ -397,12 +409,20 @@ class AdvancedGameWiki {
     renderRecipeSection(item) {
         if (!item.recipe) return '';
         
-        const materialsHtml = item.recipe.materials?.map(material => `
-            <li class="property-item">
-                <span class="property-label">${material.itemId.replace(/_/g, " ")}</span>
-                <span class="property-value">${material.quantity}</span>
-            </li>
-        `).join('') || '';
+        const materialsHtml = item.recipe.materials?.map(material => {
+            const materialItem = this.findItemById(material.itemId);
+            const displayName = materialItem ? materialItem.name : material.itemId.replace(/_/g, " ");
+            const clickableName = materialItem ? 
+                `<a href="#" class="item-link" data-item-id="${material.itemId}">${displayName}</a>` : 
+                displayName;
+            
+            return `
+                <li class="property-item">
+                    <span class="property-label">${clickableName}</span>
+                    <span class="property-value">${material.quantity}</span>
+                </li>
+            `;
+        }).join('') || '';
 
         return `
             <div class="detail-section">
@@ -424,6 +444,28 @@ class AdvancedGameWiki {
                 <h4>Materials Required</h4>
                 <ul class="property-list">
                     ${materialsHtml}
+                </ul>
+            </div>
+        `;
+    }
+
+    renderBuildsIntoSection(item) {
+        const itemsUsingThis = this.findItemsUsingMaterial(item.itemId);
+        
+        if (itemsUsingThis.length === 0) return '';
+        
+        const buildsIntoHtml = itemsUsingThis.map(usingItem => `
+            <li class="property-item">
+                <a href="#" class="item-link" data-item-id="${usingItem.itemId}">${usingItem.name}</a>
+                <span class="property-value">${usingItem.type}</span>
+            </li>
+        `).join('');
+
+        return `
+            <div class="detail-section">
+                <h3>Builds Into</h3>
+                <ul class="property-list">
+                    ${buildsIntoHtml}
                 </ul>
             </div>
         `;
@@ -1137,6 +1179,18 @@ class AdvancedGameWiki {
         } else {
             return `${secs}s`;
         }
+    }
+
+    findItemById(itemId) {
+        return this.items.find(item => item.itemId === itemId);
+    }
+
+    findItemsUsingMaterial(materialId) {
+        return this.items.filter(item => 
+            item.recipe && 
+            item.recipe.materials && 
+            item.recipe.materials.some(material => material.itemId === materialId)
+        );
     }
 
     showLoading() {

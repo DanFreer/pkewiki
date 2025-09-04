@@ -375,6 +375,26 @@ a:hover {
   color: var(--color-primary-hover);
 }
 
+/* Item links in modals */
+.item-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid transparent;
+  transition: all var(--duration-fast) var(--ease-standard);
+  cursor: pointer;
+}
+
+.item-link:hover {
+  color: var(--color-primary-hover);
+  border-bottom-color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+.item-link:active {
+  color: var(--color-primary-active);
+}
+
 code,
 pre {
   font-family: var(--font-family-mono);

@@ -316,7 +316,7 @@ class AdvancedGameWiki {
                                 <span class="property-value">${item.level}</span>
                             </li>
                             <li class="property-item">
-                                <span class="property-label">Strenght</span>
+                                <span class="property-label">Strength</span>
                                 <span class="property-value">${item.requirements.strength}</span>   
                             </li>
                             <li class="property-item">

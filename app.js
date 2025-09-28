@@ -6,6 +6,7 @@ class AdvancedGameWiki {
         this.categories = [];
         this.gameInfo = {};
         this.usingMockData = false;
+        this.recipes = [];
         
         // Initialize missing properties
         this.apiConfig = {
@@ -76,6 +77,9 @@ class AdvancedGameWiki {
             console.log("gamedata loaded");
             this.gameData = data;
             this.items = this.normalizeItems(data.items || data);
+            // Load recipes.json here
+            const recipesData = await this.fetchJsonData('data/recipes.json');
+            this.recipes = Array.isArray(recipesData) ? recipesData : (recipesData.knownRecipes || []);
             this.buildFilterOptions();
             this.populateFilterControls();
             this.clearAllFilters();
@@ -407,15 +411,20 @@ class AdvancedGameWiki {
     }
 
     renderRecipeSection(item) {
-        if (!item.recipe) return '';
-        
-        const materialsHtml = item.recipe.materials?.map(material => {
+        // Use recipe from recipes.json
+        const recipe = this.findRecipeForItem(item.itemId);
+        if (!recipe) return '';
+        // Skill requirements
+        const skillReq = recipe.skillRequirements || {};
+        const skillRequired = skillReq.primarySkill || recipe.skillRequired || '';
+        const skillLevel = skillReq.level || recipe.skillLevel || '';
+        // Materials
+        const materialsHtml = recipe.materials?.map(material => {
             const materialItem = this.findItemById(material.itemId);
             const displayName = materialItem ? materialItem.name : material.itemId.replace(/_/g, " ");
             const clickableName = materialItem ? 
                 `<a href="#" class="item-link" data-item-id="${material.itemId}">${displayName}</a>` : 
                 displayName;
-            
             return `
                 <li class="property-item">
                     <span class="property-label">${clickableName}</span>
@@ -430,15 +439,15 @@ class AdvancedGameWiki {
                 <ul class="property-list">
                     <li class="property-item">
                         <span class="property-label">Skill Required</span>
-                        <span class="property-value">${item.recipe.skillRequired}</span>
+                        <span class="property-value">${skillRequired}</span>
                     </li>
                     <li class="property-item">
                         <span class="property-label">Skill Level</span>
-                        <span class="property-value">${item.recipe.skillLevel}</span>
+                        <span class="property-value">${skillLevel}</span>
                     </li>
                     <li class="property-item">
                         <span class="property-label">Craft Time</span>
-                        <span class="property-value">${this.formatTime(item.recipe.craftTime)}</span>
+                        <span class="property-value">${recipe.craftTime ? this.formatTime(recipe.craftTime) : ''}</span>
                     </li>
                 </ul>
                 <h4>Materials Required</h4>
@@ -1185,12 +1194,35 @@ class AdvancedGameWiki {
         return this.items.find(item => item.itemId === itemId);
     }
 
+    // Replace findItemsUsingMaterial to use recipes.json
     findItemsUsingMaterial(materialId) {
-        return this.items.filter(item => 
-            item.recipe && 
-            item.recipe.materials && 
-            item.recipe.materials.some(material => material.itemId === materialId)
+        // Find all recipes that use this material
+        const recipesUsingMaterial = this.recipes.filter(recipe =>
+            recipe.materials && recipe.materials.some(mat => mat.itemId === materialId)
         );
+        // For each recipe, find the output item in this.items
+        return recipesUsingMaterial.map(recipe => {
+            // Try to find by itemId or by name (normalized)
+            let outputItem = this.items.find(item =>
+                item.itemId === recipe.recipeId ||
+                item.itemId === recipe.itemId ||
+                (item.name && recipe.name && item.name.toLowerCase() === recipe.name.toLowerCase())
+            );
+            // Fallback: create a minimal object if not found
+            if (!outputItem) {
+                outputItem = {
+                    itemId: recipe.recipeId || recipe.itemId || recipe.name?.toLowerCase().replace(/ /g, '_'),
+                    name: recipe.name || 'Unknown',
+                    type: recipe.category || 'Recipe'
+                };
+            }
+            return outputItem;
+        });
+    }
+
+    // Helper to find a recipe for an item by itemId
+    findRecipeForItem(itemId) {
+        return this.recipes.find(recipe => recipe.recipeId === itemId || recipe.itemId === itemId || recipe.name?.toLowerCase().replace(/ /g, '_') === itemId);
     }
 
     showLoading() {

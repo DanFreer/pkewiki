@@ -16,6 +16,32 @@
             <span class="wiki-subtitle">Item Wiki</span>
             <br />
           </div>
+          <div
+            class="search-section"
+            style="flex: 1; display: flex; align-items: center; width: 100%"
+          >
+            <div class="search-container" style="width: 100%; display: flex">
+              <input
+                type="text"
+                id="global-search"
+                placeholder="Search Items (e.g., robe, orb, chest, dagger, dragon)..."
+                class="search-input"
+              />
+              <button class="search-btn" id="search-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -23,27 +49,6 @@
 
     <!-- Main Content -->
     <main class="main-content">
-      <!-- Home Section -->
-      <section class="home-section">
-        <div class="container">
-          <div class="stats-section">
-            <div class="stats-grid">
-              <div class="stat-card">
-                <div class="stat-number" id="total-items">0</div>
-                <div class="stat-label">Total Items</div>
-                <div class="stat-detail">Across all categories</div>
-              </div>
-
-              <div class="stat-card">
-                <div class="stat-number" id="response-time">0ms</div>
-                <div class="stat-label">Response Time</div>
-                <div class="stat-detail">Average latency</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Items Section -->
       <section class="items-section">
         <div class="container">
@@ -193,29 +198,7 @@
           </div>
 
           <div class="items-content">
-            <div class="search-section">
-              <div class="search-container">
-                <input
-                  type="text"
-                  id="global-search"
-                  placeholder="Search items (e.g., robe, orb, chest, dagger, dragon)..."
-                  class="search-input"
-                />
-                <button class="search-btn" id="search-btn">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <!-- Search bar moved to header -->
             <br />
             <div class="items-grid" id="items-grid">
               <!-- Items will be populated by JavaScript -->
@@ -239,6 +222,42 @@
       </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      style="
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 1000;
+        display: none;
+        padding: 12px 18px;
+        font-size: 1.2em;
+        border-radius: 50%;
+        background: #222;
+        color: #fff;
+        border: none;
+        box-shadow: 0 2px 8px rgba(221, 203, 203, 0.2);
+        cursor: pointer;
+      "
+    >
+      ↑
+    </button>
+
     <script src="app.js"></script>
+    <script>
+      // Show/hide back-to-top button
+      const backToTop = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>

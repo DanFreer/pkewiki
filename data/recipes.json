@@ -1,5 +1,5 @@
 {
-    
+    "success": true,
     "knownRecipes": [
         {
             "recipeId": "iron_sword_basic",
@@ -4296,7 +4296,1871 @@
             },
             "craftingTime": 45,
             "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_sword",
+            "name": "Adamant Sword",
+            "description": "Forge an elite adamant sword for Warriors.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebe9ee6117d22e46bca"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebe9ee6117d22e46bcb"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebe9ee6117d22e46bcc"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebe9ee6117d22e46bcd"
+                },
+                {
+                    "itemId": "golden_sword",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebe9ee6117d22e46bce"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebe9ee6117d22e46bcf"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_sword",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_boots",
+            "name": "Adamant Boots",
+            "description": "Forge protective adamant footwear.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bdb"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bdc"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bdd"
+                },
+                {
+                    "itemId": "hide",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bde"
+                },
+                {
+                    "itemId": "armor_scrap",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bdf"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46be0"
+                },
+                {
+                    "itemId": "golden_boots",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46be1"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_boots",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_mace",
+            "name": "Adamant Mace",
+            "description": "Craft a blessed adamant mace for Warriors and Paladins.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46be9"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bea"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46beb"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bec"
+                },
+                {
+                    "itemId": "golden_mace",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bed"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bee"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_mace",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_hammer",
+            "name": "Adamant War Hammer",
+            "description": "Forge a devastating adamant war hammer.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bf6"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bf7"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bf8"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bf9"
+                },
+                {
+                    "itemId": "golden_hammer",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bfa"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46bfb"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_hammer",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_staff",
+            "name": "Adamant Arcane Staff",
+            "description": "Craft a potent magical staff from adamant.",
+            "category": "enchanting",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c03"
+                },
+                {
+                    "itemId": "elder_essence",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c04"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c05"
+                },
+                {
+                    "itemId": "ice_crystal",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c06"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c07"
+                },
+                {
+                    "itemId": "mahogany_wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c08"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c09"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c0a"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c0b"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c0c"
+                },
+                {
+                    "itemId": "golden_staff",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c0d"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_staff",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_wand",
+            "name": "Adamant Channeling Wand",
+            "description": "Create a refined adamant wand for spellcasters.",
+            "category": "enchanting",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c15"
+                },
+                {
+                    "itemId": "elder_essence",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c16"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c17"
+                },
+                {
+                    "itemId": "ice_crystal",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c18"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c19"
+                },
+                {
+                    "itemId": "mahogany_wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c1a"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c1b"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c1c"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c1d"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c1e"
+                },
+                {
+                    "itemId": "golden_wand",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c1f"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_wand",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_orb",
+            "name": "Adamant Orb of Power",
+            "description": "Forge a powerful magical orb from adamant.",
+            "category": "enchanting",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c27"
+                },
+                {
+                    "itemId": "gold_ingot",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c28"
+                },
+                {
+                    "itemId": "elder_essence",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c29"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c2a"
+                },
+                {
+                    "itemId": "ice_crystal",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c2b"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c2c"
+                },
+                {
+                    "itemId": "mahogany_wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c2d"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 45,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c2e"
+                },
+                {
+                    "itemId": "wisdom_essence",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c2f"
+                },
+                {
+                    "itemId": "soul_crystal",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c30"
+                },
+                {
+                    "itemId": "dark_essence",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c31"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c32"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c33"
+                },
+                {
+                    "itemId": "golden_orb",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c34"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_orb",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_dagger",
+            "name": "Adamant Assassin Dagger",
+            "description": "Craft a lethal adamant dagger for stealth attacks.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c3c"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c3d"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c3e"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c3f"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c40"
+                },
+                {
+                    "itemId": "golden_dagger",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c41"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_dagger",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_throwing_knife",
+            "name": "Adamant Throwing Knife",
+            "description": "Craft a set of balanced adamant throwing knives.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c49"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c4a"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c4b"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c4c"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c4d"
+                },
+                {
+                    "itemId": "golden_shuriken",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c4e"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_shuriken",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_bow",
+            "name": "Adamant Longbow",
+            "description": "Craft an elite adamant longbow for Rangers.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 15,
+                "secondarySkills": [
+                    {
+                        "skill": "woodcutting",
+                        "level": 25,
+                        "_id": "68defebf9ee6117d22e46c56"
+                    }
+                ]
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c57"
+                },
+                {
+                    "itemId": "web",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c58"
+                },
+                {
+                    "itemId": "silk",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c59"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c5a"
+                },
+                {
+                    "itemId": "elder_essence",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c5b"
+                },
+                {
+                    "itemId": "mahogany_wood",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c5c"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c5d"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c5e"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 100,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c5f"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c60"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c61"
+                },
+                {
+                    "itemId": "golden_bow",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c62"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_bow",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_crossbow",
+            "name": "Adamant Heavy Crossbow",
+            "description": "Engineer a sophisticated adamant crossbow.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 15,
+                "secondarySkills": [
+                    {
+                        "skill": "woodcutting",
+                        "level": 25,
+                        "_id": "68defebf9ee6117d22e46c6a"
+                    }
+                ]
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c6b"
+                },
+                {
+                    "itemId": "web",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c6c"
+                },
+                {
+                    "itemId": "silk",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c6d"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c6e"
+                },
+                {
+                    "itemId": "elder_essence",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c6f"
+                },
+                {
+                    "itemId": "mahogany_wood",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c70"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c71"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c72"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 100,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c73"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c74"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c75"
+                },
+                {
+                    "itemId": "golden_crossbow",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c76"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_crossbow",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_spear",
+            "name": "Adamant War Spear",
+            "description": "Forge a deadly adamant spear for Rangers.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 15,
+                "secondarySkills": [
+                    {
+                        "skill": "woodcutting",
+                        "level": 25,
+                        "_id": "68defebf9ee6117d22e46c7e"
+                    }
+                ]
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c7f"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c80"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c81"
+                },
+                {
+                    "itemId": "elder_essence",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c82"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c83"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 100,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c84"
+                },
+                {
+                    "itemId": "antler",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c85"
+                },
+                {
+                    "itemId": "old_weapon",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c86"
+                },
+                {
+                    "itemId": "golden_spear",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c87"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c88"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_spear",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_shield",
+            "name": "Adamant Shield",
+            "description": "Craft a blessed adamant shield for divine protection.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c90"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c91"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 100,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c92"
+                },
+                {
+                    "itemId": "troll_hide",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c93"
+                },
+                {
+                    "itemId": "armor_scrap",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c94"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c95"
+                },
+                {
+                    "itemId": "golden_shield",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c96"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_shield",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_helmet",
+            "name": "Adamant Helmet",
+            "description": "Forge protective adamant headgear.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c9e"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 105,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46c9f"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 32,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ca0"
+                },
+                {
+                    "itemId": "troll_hide",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ca1"
+                },
+                {
+                    "itemId": "armor_scrap",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ca2"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ca3"
+                },
+                {
+                    "itemId": "golden_helmet",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ca4"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_helmet",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_armor",
+            "name": "Adamant Chestplate",
+            "description": "Craft a protective adamant chestplate.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cac"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cad"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 400,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cae"
+                },
+                {
+                    "itemId": "troll_hide",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46caf"
+                },
+                {
+                    "itemId": "armor_scrap",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cb0"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cb1"
+                },
+                {
+                    "itemId": "golden_armor",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cb2"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_armor",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_robe",
+            "name": "Adamant Robe",
+            "description": "Craft a protective adamant Robe.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cba"
+                },
+                {
+                    "itemId": "silk",
+                    "quantity": 400,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cbb"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cbc"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 400,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cbd"
+                },
+                {
+                    "itemId": "troll_hide",
+                    "quantity": 75,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cbe"
+                },
+                {
+                    "itemId": "armor_scrap",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cbf"
+                },
+                {
+                    "itemId": "golden_robe",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cc0"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 30000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cc1"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_robe",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_gloves",
+            "name": "Adamant Gauntlets",
+            "description": "Craft protective adamant hand armor.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cc9"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cca"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ccb"
+                },
+                {
+                    "itemId": "armor_scrap",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ccc"
+                },
+                {
+                    "itemId": "troll_hide",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ccd"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cce"
+                },
+                {
+                    "itemId": "golden_gloves",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ccf"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_gloves",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "iron_quiver",
+            "name": "Iron Quiver",
+            "description": "Craft a basic iron quiver for Rangers.",
+            "category": "blacksmithing",
+            "tier": 1,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 1,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "iron_ore",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cd7"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 20,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cd8"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cd9"
+                },
+                {
+                    "itemId": "coal",
+                    "quantity": 5,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cda"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "iron_quiver",
+                "quantity": 1
+            },
+            "craftingTime": 180,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "silver_quiver",
+            "name": "Silver Quiver",
+            "description": "Craft a refined silver quiver for Rangers.",
+            "category": "blacksmithing",
+            "tier": 2,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 5,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "silver_ore",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ce2"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 30,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ce3"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ce4"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ce5"
+                },
+                {
+                    "itemId": "iron_quiver",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46ce6"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "silver_quiver",
+                "quantity": 1
+            },
+            "craftingTime": 300,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "golden_quiver",
+            "name": "Golden Quiver",
+            "description": "Craft an elegant golden quiver for Rangers.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 15,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "gold_ingot",
+                    "quantity": 35,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cee"
+                },
+                {
+                    "itemId": "silk",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cef"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cf0"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cf1"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cf2"
+                },
+                {
+                    "itemId": "silver_quiver",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cf3"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 8000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cf4"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "golden_quiver",
+                "quantity": 1
+            },
+            "craftingTime": 450,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_quiver",
+            "name": "Adamant Quiver",
+            "description": "Craft a masterwork adamant quiver for Rangers.",
+            "category": "blacksmithing",
+            "tier": 4,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cfc"
+                },
+                {
+                    "itemId": "silk",
+                    "quantity": 80,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cfd"
+                },
+                {
+                    "itemId": "gold_ingot",
+                    "quantity": 20,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cfe"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 75,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46cff"
+                },
+                {
+                    "itemId": "elderwood_wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d00"
+                },
+                {
+                    "itemId": "crystal_wood",
+                    "quantity": 50,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d01"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 20,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d02"
+                },
+                {
+                    "itemId": "golden_quiver",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d03"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 15000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d04"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_quiver",
+                "quantity": 1
+            },
+            "craftingTime": 600,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "iron_offhand_dagger",
+            "name": "Iron Offhand Dagger",
+            "description": "Craft a basic iron offhand dagger for Rogues.",
+            "category": "blacksmithing",
+            "tier": 1,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 1,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "iron_ore",
+                    "quantity": 8,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d0c"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d0d"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 5,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d0e"
+                },
+                {
+                    "itemId": "coal",
+                    "quantity": 3,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d0f"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "iron_offhand_dagger",
+                "quantity": 1
+            },
+            "craftingTime": 120,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "silver_offhand_dagger",
+            "name": "Silver Offhand Dagger",
+            "description": "Craft a refined silver offhand dagger for Rogues.",
+            "category": "blacksmithing",
+            "tier": 2,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 5,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "silver_ore",
+                    "quantity": 12,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d17"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d18"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d19"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 8,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d1a"
+                },
+                {
+                    "itemId": "iron_offhand_dagger",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d1b"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "silver_offhand_dagger",
+                "quantity": 1
+            },
+            "craftingTime": 240,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "golden_offhand_dagger",
+            "name": "Golden Offhand Dagger",
+            "description": "Craft an elegant golden offhand dagger for Rogues.",
+            "category": "blacksmithing",
+            "tier": 3,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 15,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "gold_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d23"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 25,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d24"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d25"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 12,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d26"
+                },
+                {
+                    "itemId": "silver_offhand_dagger",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d27"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 6000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d28"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "golden_offhand_dagger",
+                "quantity": 1
+            },
+            "craftingTime": 360,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "adamant_offhand_dagger",
+            "name": "Adamant Offhand Dagger",
+            "description": "Craft a masterwork adamant offhand dagger for Rogues.",
+            "category": "blacksmithing",
+            "tier": 4,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 20,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "adamant_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d30"
+                },
+                {
+                    "itemId": "gold_ingot",
+                    "quantity": 15,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d31"
+                },
+                {
+                    "itemId": "leather",
+                    "quantity": 40,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d32"
+                },
+                {
+                    "itemId": "mahogany_wood",
+                    "quantity": 20,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d33"
+                },
+                {
+                    "itemId": "charcoal",
+                    "quantity": 18,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d34"
+                },
+                {
+                    "itemId": "golden_offhand_dagger",
+                    "quantity": 1,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d35"
+                },
+                {
+                    "itemId": "gold",
+                    "quantity": 12000,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d36"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "adamant_offhand_dagger",
+                "quantity": 1
+            },
+            "craftingTime": 480,
+            "isStarterRecipe": true
+        },
+        {
+            "recipeId": "orb_of_power",
+            "name": "Orb of Power",
+            "description": "Forge a powerful offhand magical orb from iron.",
+            "category": "blacksmithing",
+            "tier": 1,
+            "requiredBuilding": "blacksmith",
+            "skillRequirements": {
+                "primarySkill": "blacksmithing",
+                "level": 1,
+                "secondarySkills": []
+            },
+            "materials": [
+                {
+                    "itemId": "iron_ore",
+                    "quantity": 8,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d3e"
+                },
+                {
+                    "itemId": "birch_bark",
+                    "quantity": 10,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d3f"
+                },
+                {
+                    "itemId": "coal",
+                    "quantity": 4,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d40"
+                },
+                {
+                    "itemId": "wood",
+                    "quantity": 20,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d41"
+                },
+                {
+                    "itemId": "rusty_weapon",
+                    "quantity": 3,
+                    "consumeOnCraft": true,
+                    "_id": "68defebf9ee6117d22e46d42"
+                }
+            ],
+            "result": {
+                "qualityVariance": {
+                    "enabled": false,
+                    "minQuality": 80,
+                    "maxQuality": 120
+                },
+                "itemId": "orb_of_power",
+                "quantity": 1
+            },
+            "craftingTime": 240,
+            "isStarterRecipe": true
         }
     ],
-    "totalKnown": 87
+    "totalKnown": 113
 }
